@@ -10,7 +10,7 @@ public class Student {
 	
 	public Student(){
 		System.out.println("\n\tWelcome to Hostel Fee Calculation Program");
-		System.out.println("Room Type available : A, B, C");
+		System.out.println("\n\tRoom Type available : A, B, C");
 		System.out.println("\t --------------------------------------- ");
 		System.out.println("\t|   ROOM TYPE   |  RATE (per semester)  |");
 		System.out.println("\t --------------------------------------- ");
@@ -35,7 +35,7 @@ public class Student {
 		for (int i=0; i < name.length() ; i++)
 	        { 
 	            char ch = name.charAt(i);
-	            if(! Character.isLetter(ch) ) {
+	            if(Character.isSpace(name.charAt(0)) || Character.toString(ch).matches("\\p{Punct}") || Character.isDigit(ch)) {
 	            	System.out.println("Invalid input. Please make sure your input contain letter only!\n");
 	            	System.out.print("Please enter your name   : ");
 	        		name = input.nextLine();
